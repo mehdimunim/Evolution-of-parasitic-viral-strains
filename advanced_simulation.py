@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 # Time parameters
 step = 1/12  # one month
-span = 1000  # years
+span = 20  # years
 t = np.arange(1, 1 + span, step)
 
 
@@ -120,9 +120,9 @@ def fR(virus, S, I_list):
     """
     result = 0
 
-    b = virus.get_transmissibility()
+    a = virus.get_virulence()
 
-    result += np.dot(b, I_list)
+    result += np.dot(a, I_list)
 
     return S*result
 
@@ -178,7 +178,7 @@ def main():
     # Defining host and virus parameters
     birth = 1
     death = 1
-    total_strain = 50
+    total_strain = 100
     s = 0
     N = 10**(3)
     # a few infected at the beginning
@@ -196,25 +196,27 @@ def main():
     (S, I_array, R) = euler(host, virus, t)
 
     # plotting abundance in function of virulence
-    fig, (ax1, ax2) = plt.subplots(1, 2)
-
     # proportions of each strain at the end
-    abundance = I_array[n - 1, :]
-    ax1.bar(a, abundance)
-    ax1.set_ylabel("abundance")
-    ax1.set_title("s= {}".format(s))
+    sum_abundance = np.sum(I_array[n-1, :])
+    abundance = I_array[n - 1, :]/sum_abundance
 
-    # plotting R0 in function of virulence
-    R0s = [virus.get_R0(i, birth, death) for i in range(total_strain)]
-    ax2.plot(a, R0s)
-    ax2.set_xlabel("virulence")
-    ax2.set_ylabel("R0")
+    cmap = plt.get_cmap("jet")
+    def rescale(y): return (y - np.min(y)) / (np.max(y) - np.min(y))
+    plt.bar(a, abundance, width=0.02, color=cmap(rescale(a)))
+
+    # Plotting R0
+    #R0s = [virus.get_R0(i, birth, death) for i in range(total_strain)]
+    # plt.plot(a, R0s, c="yellow")
+
+    plt.ylabel("abundance")
+    plt.title("s= {}".format(s))
 
     # saving and showing figure
-    fig.tight_layout()
-    plt.savefig("superinfection with {} strains and s={}.png".format(
-        virus.get_strain_number(), virus.get_factor()))
+    plt.savefig("superinfection with {} strains, {:e} points and s={}.png".format(
+        n, virus.get_strain_number(), virus.get_factor()))
     plt.show()
+
+    # Plotting R0 in function of virulence
 
 
 main()
