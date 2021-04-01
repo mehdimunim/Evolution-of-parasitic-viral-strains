@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 # Time parameters
 step = 1/24
-span = 100  # days
+span = 1000  # days
 t = np.arange(1, 1 + span, step)
 
 
@@ -180,7 +180,7 @@ def main():
     birth = 1
     death = 1
     total_strain = 100
-    s = 1
+    s = 0.5
     N = 10**(3)
     # a few infected at the beginning
     initial_infected = np.array([2/N]*total_strain)
