@@ -10,7 +10,7 @@ As a context, I assumed that a range of strains infects a population at t = 0.  
 
 ## Basic notions
 
-* Virulence: how the virus is dangerous, often corresponds to the death.
+* Virulence: how the virus is dangerous, often corresponds to the death rate.
 * Transmissibility: how the virus is contagious, the rate at which susceptible became infected.
 * R0: the expected cases provoked by patient 0 in a whole new susceptible population 
 
