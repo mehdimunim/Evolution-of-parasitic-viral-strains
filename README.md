@@ -1,6 +1,6 @@
 # Evolution-of-parasitic-viral-strains
 Simulations done for the English Tiny Thesis.
-Mainly inspired from *The Equation of Life* by Martin Nowak.
+Mainly inspired from *The Equations of Life* by Martin Nowak.
 
 ## Presentation
 
