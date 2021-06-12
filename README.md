@@ -15,20 +15,18 @@ This work aims at modeling the evolution of a virus. We assumed that the virus e
 * R_0: the expected cases provoked by patient 0 in a whole new susceptible population. 
 
 * SIR: Susceptible-Infected-Removed.
-* 
+ 
 ## Code
+
+The code works in Windows with python 3.8. Requirements: matplotlib 3.2, numpy 1.18.
 
 - simulation.py: A first approach with two strains. I looked at which one will dominate, i.e died last. I also plotted the infected, susceptible, deceased evolutions against time.
 
 - superinfection.py: I considered a range of strains and looked which ones survive after a long time. 
 
-## Outputs examples
-
-Examples of outputs can be found in outputs folder.
-
 ## Document
 
-My document explaining my reflections can be found [here](documents/MUNIM Mehdi Tiny Thesis.pdf). My presentation in PPTX is [there](documents/MUNIM.pptx).
+My document explaining my reflections can be found [here](documents/Tiny_Thesis.pdf). My presentation in PPTX is [there](documents/MUNIM.pptx).
 
 ## Source
 

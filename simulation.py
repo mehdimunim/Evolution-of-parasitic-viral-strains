@@ -1,10 +1,8 @@
-import os
 import numpy as np
 import matplotlib.pyplot as plt
 
 # Simulations for the evolution of parasitic viral strains
 # Author: Mehdi Munim
-#
 
 # System to be visualized numerically
 # Inspired from "The Equations of Life" (M. Nowak)
@@ -143,7 +141,7 @@ def main():
         "Infected by strain 2 (R0 = {:.2f})".format(R0(b2, a2)), fontsize=10)
 
     fig.tight_layout()
-    plt.savefig("a1={:.2e} a2={:.2e} beta={:.2e}.png".format(
+    plt.savefig("outputs/simulation/a1={:.2e} a2={:.2e} beta={:.2e}.png".format(
         a1, a2, b1), dpi=500)
 
     plt.show()
