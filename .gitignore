@@ -1,2 +1,2 @@
-outputs/superinfection/*
-outputs/simulation/*
+outputs/superinfection/*.png
+outputs/simulation/*.png
