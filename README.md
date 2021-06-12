@@ -2,7 +2,7 @@
 
 ## Presentation
 
-> "Tiny Thesis" project for my engineering school. Loosely based on chapter "Evolution of Virulence" in ["Evolutionary Dynamics"](##Source) (Martin Nowak).
+> "Tiny Thesis" project for my engineering school. Loosely based on chapter "Evolution of Virulence" in ["Evolutionary Dynamics"](## Source) (Martin Nowak).
 
 This work aims at modeling the evolution of a virus. We assumed that the virus exists in several strains with different virulences. At t_0 , a range of strains infects a population. Through both mathematics and simulations, we look at which strains remain in the end. A strong emphasis is put in the impact on host populations.  
 
