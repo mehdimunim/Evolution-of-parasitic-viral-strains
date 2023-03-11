@@ -26,7 +26,7 @@ The code works in Windows with python 3.8. Requirements: matplotlib 3.2, numpy 1
 
 ## Document
 
-My document explaining my reflections can be found [here](documents/Tiny_Thesis.pdf). My presentation in PPTX is [there](documents/MUNIM.pptx).
+My document explaining my reflections can be found [here](documents/Mehdi%20MUNIM%20Tiny%20Thesis.pdf). My presentation in PPTX is [there](documents/MUNIM.pptx).
 
 ## Source
 
